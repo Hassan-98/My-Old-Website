@@ -1,0 +1,766 @@
+/* Main Styles  */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.7s ease;
+  font-family: 'Poppins', sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+.container-fluid{
+  padding: 0;
+}
+.row{
+  padding: 0;
+  margin: 0
+}
+
+/* PreLoader Styles */
+
+.loader{
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  z-index: 99;
+  background: url("https://www.toptal.com/designers/subtlepatterns/patterns/type.png");
+}
+.loader div{
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  padding: 20px;
+  text-align: center;
+}
+.loader p{
+  position: absolute;
+  top: 35%;
+  left: 51%;
+  transform: translate(-50%,-50%);
+  padding: 20px;
+  color: #ccc;
+  font-size: 100px;
+  letter-spacing: 15px;
+  text-align: center;
+  text-shadow: 4px 4px 10px #000;
+}
+.loader p span{
+  opacity: 0;
+}
+.loader p span:first-of-type{
+  animation: dots 1s linear 0s infinite alternate;
+}
+.loader p span:nth-of-type(2){
+  animation: dots 1s linear 0.5s infinite alternate;
+}
+.loader p span:last-of-type{
+  animation: dots 1s linear 1s infinite alternate;
+}
+.loader div span {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  border: 12px solid rgba(255,255,255,0.1);
+  border-bottom: 12px groove #fff;
+  border-top: 12px groove #fff;
+  border-radius: 50%;
+  animation: rotating 1.1s ease infinite;
+}
+@keyframes rotating {
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+@keyframes dots {
+  0%{
+    opacity: 0
+  }
+  100%{
+    opacity: 1
+  }
+}
+
+@media (max-width: 768px) {
+  .loader div span {
+    width: 90px;
+    height: 90px;
+    border: 13px solid rgba(255,255,255,0.1);
+    border-bottom: 13px groove #fff;
+    border-top: 13px groove #fff;
+  }
+  .loader div{
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+  .loader p{
+    font-size: 70px;
+  }
+}
+@media (max-width: 460px) {
+  .loader div span {
+    width: 60px;
+    height: 60px;
+    border: 7px solid rgba(255,255,255,0.1);
+    border-bottom: 7px groove #fff;
+    border-top: 7px groove #fff;
+  }
+  .loader div{
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+  .loader p{
+    font-size: 30px;
+  }
+}
+
+/*   Header Section   */
+
+header{
+  background: url(../images/bg1.jpg) fixed no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 650px
+}
+.overlay{
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6)
+}
+header .backg{
+  border-radius: 25px;
+  background: #fff;
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  padding: 0;
+}
+header .backg i{
+  padding: 25px 35px;
+  font-size: 25px;
+  background: #fff;
+  margin: 0!important;
+  cursor: pointer;
+}
+header .backg i:hover{
+  background: #551ea1;
+  color: #fff;
+  transform: scale(1.5);
+}
+@media (max-width: 576px){
+  header .backg i{
+    padding: 15px;
+    font-size: 20px;
+  }
+  header{
+    height: 500px
+  }
+}
+
+/*   Card Section   */
+
+.card{
+  text-align: center;
+  margin-top: -200px;
+  padding: 0 50px 50px
+}
+.card img{
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  margin: 0 auto;
+  border: 7px solid rgba(255, 255, 255, 0.281);
+  border-bottom-color: transparent;
+  margin-top: -120px;
+}
+.card img:hover{
+  transform: translateY(5px)
+}
+.card h2{
+  font-size: 50px;
+  font-weight: bold;
+  color: #551ea1;
+}
+.card h4{
+  margin-bottom: 40px;
+}
+.card .infos{
+  margin: 0 auto 50px
+}
+.card .infos p{
+  display: inline-block;
+  padding: 15px;
+  font-size: 18px;
+}
+.card .infos p span{
+  font-weight: bold;
+  font-size: 20px
+}
+.card .infos i{
+  padding: 10px;
+  margin-right: 10px;
+  font-size: 20px;
+  box-shadow: 0 0 6px 0px #551ea1;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.card .infos i:hover{
+  box-shadow: 0 0 6px 1px #551ea1,0 0 6px 2px #551ea1cb;
+}
+.card .socials i{
+  padding: 10px;
+  font-size: 25px;
+  border-radius: 50%;
+  box-shadow: 0 0 6px 0px #551ea1;
+  margin-right: 15px;
+  cursor: pointer;
+}
+.card .socials i:first-of-type{
+  padding: 10px 15px;
+}
+.card i:hover{
+  color: #551ea1;
+  transform: translateY(5px)
+}
+@media (max-width: 576px){
+  .card img{
+    width: 180px;
+    height: 180px; 
+    margin-top: -90px;
+  }
+  .card {
+    padding: 0 10px 50px;
+  }
+  .card .infos p{
+    padding: 15px;
+    font-size: 16px;
+  }
+  .card .infos p span{
+    font-size: 18px
+  }
+}
+@media (max-width: 400px){
+  .card h2{
+    font-size: 35px;
+  }
+  .card h4{
+    font-size: 20px;
+  }
+}
+@media (max-width: 330px){
+  .card .infos p{
+    padding: 15px;
+    font-size: 13px;
+  }
+  .card .infos p span{
+    font-size: 14px
+  }
+}
+
+/*   About Me Section   */
+
+.About-Me{
+  padding: 70px;
+}
+.About-Me .my-info{
+  padding-left: 40px
+}
+.About-Me .my-info h1{
+  padding: 10px 0;
+  font-size: 50px
+}
+.About-Me .my-info h1::after{
+  content: '';
+  display: block;
+  width: 50%;
+  height: 2px;
+  margin: 8px 0;
+  background: linear-gradient(to right, #551ea1 , #6c22d3, #fff);
+}
+.About-Me .my-info p {
+  font-size: 15px;
+  color: #a3a3a3;
+  line-height: 1.6;
+  width: 90%;
+}
+.About-Me .my-info button {
+  background: #5808c7;
+  padding: 10px 25px;
+  color: #fff;
+  cursor: pointer;
+  border: 1px solid;
+  margin-top: 20px;
+  border-radius: 4px
+}
+.About-Me .my-info button:hover {
+  background: #fff;
+  color: #5808c7;
+  transform: translateY(5px) scale(0.95)
+}
+@media (max-width: 576px){
+  .About-Me{
+    padding: 40px 5px;
+  }
+  .About-Me div{
+    text-align: center!important
+  }
+  
+.About-Me .my-info h1::after{
+  content: '';
+  display: block;
+  width: 100%;
+  height: 2px;
+  margin: 8px 0;
+  background: linear-gradient(to right, #551ea1 , #6c22d3, #fff);
+}
+}
+
+/*   MySkills Section   */
+
+.Skills{
+  background: url(../images/bg4.jpeg) fixed no-repeat;
+  background-size: cover;
+  width: 100%;
+  color: #fff
+}
+.Skills h1::after{
+  content: '';
+  display: block;
+  width: 270px;
+  height: 2.5px;
+  margin: 10px 0;
+  background: #fff;
+}
+.Skills .sk-row{
+  padding: 70px 10px
+}
+.Skills .row .first p{
+  color: #999
+}
+.Skills .row .skill div{
+  width: 85%;
+  height: 10px;
+  background: #ccc;
+  margin-bottom: 20px;
+  border-radius: 25px;
+  position: relative;
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+}
+.Skills .row .skill div span{
+  display: inline-block;
+  height: 100%;
+  background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  margin-bottom: 15px;
+  border-radius: 25px;
+}
+.Skills .row .skill:first-of-type div span{
+  width: 95%;
+}
+.Skills .row .skill:nth-of-type(2) div span{
+  width: 85%;
+}
+.Skills .row .skill:nth-of-type(3) div span{
+  width: 70%;
+}
+.Skills .row .skill:last-of-type div span{
+  width: 30%;
+}
+.Skills .row .skill div::after{
+  content: attr(data-skill);
+  position: absolute;
+  top: -25px;
+  right: 0;
+  font-size: 14px
+}
+@media (max-width: 768px){
+  .Skills .first{
+    margin-bottom: 50px
+  }
+}
+@media (max-width: 576px){
+  .Skills .first{
+    margin-bottom: 50px
+  }
+  .Skills .row .skill div{
+    width: 100%;
+  }
+  .Skills .row h4{
+    font-size: 20px;
+  }
+  .Skills h1::after {
+    width: 250px;
+  }
+  h1 {
+    font-size: 2.4rem;
+  }
+}
+
+/*   Services Section    */
+
+.My-Services{
+  padding: 100px 50px;
+}
+.My-Services .heading h1{
+  margin-bottom: 80px;
+  font-size: 50px
+}
+.My-Services .heading h1::after{
+  content: '';
+  display: block;
+  width: 25%;
+  height: 2.5px;
+  margin: 15px auto;
+  background: linear-gradient(to right, #551ea1 , #6c22d3, #fff);
+}
+.My-Services .service{
+  border: 1px solid #551ea1;
+  padding: 50px 15px;
+  cursor: pointer;
+  border-bottom: 5px solid #551ea1;
+}
+.My-Services .service:hover{
+  transform: scale(1.05);
+  border-top: 5px solid #551ea1;
+}
+.My-Services .service img{
+  width: 80px;
+  height: 80px;
+}
+.My-Services .service h3 {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  text-shadow: 0px 0px 1px #551ea1;
+}
+.My-Services .service p{
+  color: #a3a3a3;
+}
+@media (max-width: 992px){
+  .My-Services .service{
+    margin-bottom: 35px
+  }
+  .My-Services .heading h1::after{
+    width: 60%;
+  }
+}
+@media (max-width: 768px){
+  .My-Services .heading h1::after{
+    width: 60%;
+  }
+}
+@media (max-width: 576px){
+  .My-Services .heading h1 {
+    font-size: 40px;
+  }
+  .My-Services .heading h1::after{
+    width: 80%;
+  }
+  .My-Services{
+    padding: 80px 10px;
+  }
+}
+
+/*   Work Numbers Section   */
+
+.Work-Numbers{
+  background: url(../images/bg6.jpg) fixed no-repeat;
+  background-size: cover;
+  color: #fff
+}
+.Work-Numbers .overlay{
+  padding: 70px 5px
+}
+.Work-Numbers span{
+  font-size: 30px
+}
+.Work-Numbers i {
+  font-size: 60px;
+  padding: 25px
+}
+@media (max-width: 768px){
+  .Work-Numbers .row div{
+    margin-bottom: 25px
+  }
+}
+
+/*    Portfolio Section    */
+
+.Portfolio{
+  padding: 100px 10px; 
+}
+
+.Portfolio .heading h1{
+  margin-bottom: 80px;
+  font-size: 50px
+}
+.Portfolio .heading h1::after{
+  content: '';
+  display: block;
+  width: 25%;
+  height: 2.5px;
+  margin: 15px auto;
+  background: linear-gradient(to right, #551ea1 , #6c22d3, #fff);
+}
+.Portfolio .image{
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+  margin-bottom: 35px;
+  padding: 10px
+}
+.Portfolio .image:hover p{
+  transform: translateY(5px)
+}
+.Portfolio .image p{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(100% - 30px);
+  height: calc(100% - 10px);
+  background: rgba(255, 255, 255, 0.95);
+  transform: translateY(105%);
+  font-size: 20px;
+  padding: 150px 0;
+  margin-left: 5px;
+  cursor: arrow;
+  color: #000;
+  font-weight: bold;
+  box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.3);
+}
+.Portfolio .image img{
+  width: calc(100% - 15px);
+  height: 450px;
+  box-shadow: 4px 4px 10px 2px rgba(0, 0, 0, 0.3);
+  border: 5px solid rgba(253, 253, 253, 0.932)
+}
+.Portfolio .image p span{
+  display: inline-block;
+}
+.Portfolio .image p span:first-of-type{
+  transform: translateY(-10px);
+}
+.Portfolio .image p span:last-of-type{
+  transform: translateY(10px);
+}
+.Portfolio .image p:hover span{
+  transform: translateY(0px);
+}
+.Portfolio .image p button{
+  padding: 7px 20px;
+  font-size: 17px;
+  margin-top: 40px;
+  background: #551ea1;
+  color: #fff;
+  font-weight: 400;
+  border-radius: 25px;
+  border: 1px solid;
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  outline: none;
+}
+.Portfolio .image p button:hover{
+  transform: scale(0.9);
+  box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.4);
+}
+
+.Portfolio .image p a{
+  padding: 7px 20px;
+  font-size: 17px;
+  margin-top: 40px;
+  background: #551ea1;
+  color: #fff;
+  font-weight: 400;
+  border-radius: 25px;
+  border: 1px solid;
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  outline: none;
+  text-decoration: none;
+  display: inline-block;
+}
+.Portfolio .image p a:hover{
+  transform: scale(0.9);
+  box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.4);
+}
+
+.Portfolio .button button{
+  padding: 10px 60px;
+  border-radius: 5px;
+  font-size: 17px;
+  margin-top: 40px;
+  background: #551ea1;
+  color: #fff;
+  border: 1px solid;
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  outline: none;
+}
+.Portfolio .button button:hover{
+  transform: scale(0.9);
+  box-shadow: 0 0 6px 6px rgba(79, 3, 102, 0.4);
+}
+
+@media (max-width: 992px){
+  .Portfolio .heading h1::after{
+    width: 60%;
+  }
+}
+@media (max-width: 768px){
+  .Portfolio .heading h1::after{
+    width: 60%;
+  }
+}
+@media (max-width: 576px){
+  .Portfolio .heading h1 {
+    font-size: 40px;
+  }
+  .Portfolio .heading h1::after{
+    width: 80%;
+  }
+}
+
+/*  Contact Me Section  */
+
+.Contact-Us{
+  background: url(../images/bg7.jpg) fixed no-repeat;
+  background-size: cover;
+  color: #fff
+}
+.Contact-Us .first{
+  padding: 120px 30px 0;
+}
+.Contact-Us .heading h1{
+  margin-bottom: 100px;
+  font-size: 50px
+}
+.Contact-Us .heading h1::after{
+  content: '';
+  display: block;
+  width: 25%;
+  height: 2.5px;
+  margin: 15px auto;
+  background:  #fff;
+}
+.Contact-Us .second{
+  padding: 0 0 80px;
+}
+.Contact-Us .second input , .Contact-Us .second button{
+  width: 100%;
+  padding: 15px 20px;
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.4);
+  margin: 0 0 20px;
+  color: #fff;
+  font-size: 18px;
+  outline: none;
+  border-right: none;
+  border-left: none;
+}
+.Contact-Us .second ::placeholder{
+  color: #fff;
+  transition: 0.5s ease-out;
+}
+.Contact-Us input:focus::placeholder {
+  font-size: 15px;
+}
+.Contact-Us textarea:focus::placeholder {
+  font-size: 15px;
+}
+.Contact-Us .second textarea{
+  width: 100%;
+  padding: 15px 20px;
+  background: rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  resize: none;
+  font-size: 18px;
+  color: #fff;
+  outline: none;
+  border-right: none;
+  border-left: none
+}
+.Contact-Us .second button{
+  text-align: center;
+  font-size: 22px;
+  cursor: pointer;
+  margin: 15px 0;
+  color: #fff
+}
+.Contact-Us .second button:hover{
+  background: #fff;
+  color: #000;
+  transform: translateY(5px);
+}
+
+.Contact-Us .third{
+  padding: 0 0 80px;
+  text-align: center
+}
+.Contact-Us .third div{
+  font-size: 25px;
+}
+.Contact-Us .third div span{
+  font-size: 20px;
+  color: #a3a3a3
+}
+.Contact-Us .third div:first-of-type span{
+  font-size: 16px;
+  color: #a3a3a3
+}
+.Contact-Us .third div .bold{
+  font-size: 25px!important;
+  font-weight: bold!important;
+  color: #fff!important;
+  border-left: 1px solid;
+  padding-left: 15px
+}
+.Contact-Us .third i{
+  font-size: 30px;
+  padding-right: 10px
+}
+
+@media (max-width: 992px){
+  .Contact-Us .heading h1::after{
+    width: 60%;
+  }
+}
+@media (max-width: 768px){
+  .Contact-Us .heading h1::after{
+    width: 60%;
+  }
+  .Contact-Us .third div{
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 576px){
+  .Contact-Us .heading h1 {
+    font-size: 40px;
+  }
+  .Contact-Us .heading h1::after{
+    width: 80%;
+  }
+}
+
+/* Footer Styles */
+
+footer{
+  background: #fff;
+  padding: 30px;
+}
+footer p {
+  font-size: 24px;
+  color: #000;
+  margin: 0
+}
+@media (max-width: 576px){
+  footer p {
+    font-size: 18px;
+  }
+}
