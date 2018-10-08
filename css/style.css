@@ -951,3 +951,84 @@ footer p {
     font-size: 18px;
   }
 }
+
+/*  XXS Screens Responsive  */
+
+@media (max-width: 315px){
+  header .backg i {
+    padding: 10px;
+    font-size: 18px;
+  }
+    .card h4 {
+      font-size: 18px;
+  }
+  .card .infos p {
+    font-size: 12px;
+  }
+  .card .socials i {
+    margin-right: 10px;
+  }
+  .About-Me .my-info {
+    padding-left: 30px;
+  }
+  .About-Me .my-info h1 {
+    font-size: 40px;
+  }
+  .About-Me .my-info p {
+    font-size: 13px;
+  }
+  .About-Me .my-info button {
+    font-size: 14px;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  .Skills .row h4 {
+    font-size: 17px;
+  }
+  .Skills h1::after {
+    width: 230px;
+  }
+  .Skills .row .first p {
+    font-size: 14px;
+  }
+  .My-Services .heading h1 {
+    font-size: 35px;
+  }
+  .My-Services .service h3 {
+    font-size: 1.2rem;
+  }
+  .My-Services .service p {
+    font-size: 14px;
+  }
+  .Portfolio .heading h1 {
+    font-size: 35px;
+  }
+  .Portfolio .image img {
+    height: 300px;
+  }
+  .Portfolio .image p {
+    font-size: 18px;
+    padding: 80px 0;
+    left: 5px;
+    width: calc(100% - 35px);
+  }
+  .Portfolio .image p a , .Portfolio .image p button {
+    font-size: 15px;
+  }
+  .Portfolio .button button {
+    padding: 10px 40px;
+  }
+  .Certificates .heading h1 {
+    font-size: 30px;
+  }
+  .Certificates .button button{
+    padding: 10px 40px;
+  }
+  .Contact-Us .heading h1 {
+    font-size: 30px;
+  }
+  .Contact-Us .second input, .Contact-Us .second button , .Contact-Us .second textarea , .Contact-Us .second button{
+    font-size: 15px;
+  }
+}
