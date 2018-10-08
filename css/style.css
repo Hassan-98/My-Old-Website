@@ -16,6 +16,11 @@ html {
   padding: 0;
   margin: 0
 }
+.overlay{
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.65)
+}
 
 /* PreLoader Styles */
 
@@ -127,11 +132,6 @@ header{
   background-size: cover;
   width: 100%;
   height: 650px
-}
-.overlay{
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.6)
 }
 header .backg{
   border-radius: 25px;
@@ -328,6 +328,9 @@ header .backg i:hover{
   width: 100%;
   color: #fff
 }
+.Skills.more{
+  background: url(../images/bg9.jpg) fixed no-repeat;
+}
 .Skills h1::after{
   content: '';
   display: block;
@@ -344,19 +347,19 @@ header .backg i:hover{
 }
 .Skills .row .skill div{
   width: 85%;
-  height: 10px;
-  background: #ccc;
+  height: 7px;
+  background: #10191E;
   margin-bottom: 20px;
-  border-radius: 25px;
+  border-radius: 50px;
   position: relative;
-  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 1px 4px 1px rgba(253, 253, 253, 0.2);
 }
 .Skills .row .skill div span{
   display: inline-block;
   height: 100%;
-  background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: #fff;
   margin-bottom: 15px;
-  border-radius: 25px;
+  border-radius: 15px 0 0 15px;
 }
 .Skills .row .skill:first-of-type div span{
   width: 95%;
@@ -377,6 +380,18 @@ header .backg i:hover{
   right: 0;
   font-size: 14px
 }
+
+
+.Skills.more .row .skill:first-of-type div span{
+  width: 80%;
+}
+.Skills.more .row .skill:nth-of-type(2) div span{
+  width: 70%;
+}
+.Skills.more .row .skill:nth-of-type(3) div span{
+  width: 65%;
+}
+
 @media (max-width: 768px){
   .Skills .first{
     margin-bottom: 50px
@@ -421,11 +436,10 @@ header .backg i:hover{
   border: 1px solid #551ea1;
   padding: 50px 15px;
   cursor: pointer;
-  border-bottom: 5px solid #551ea1;
+  border-top: 5px solid #551ea1;
 }
 .My-Services .service:hover{
-  transform: scale(1.05);
-  border-top: 5px solid #551ea1;
+  box-shadow: 1px 15px 10px #551ea163
 }
 .My-Services .service img{
   width: 80px;
@@ -523,7 +537,7 @@ header .backg i:hover{
   left: 0;
   width: calc(100% - 30px);
   height: calc(100% - 10px);
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(255, 255, 255, 0.9);
   transform: translateY(105%);
   font-size: 20px;
   padding: 150px 0;
@@ -625,6 +639,151 @@ header .backg i:hover{
   }
 }
 
+/*    Certificates Section    */
+
+.Certificates{
+  padding: 100px 10px; 
+}
+
+.Certificates .heading h1{
+  margin-bottom: 80px;
+  font-size: 50px
+}
+.Certificates .heading h1::after{
+  content: '';
+  display: block;
+  width: 25%;
+  height: 2.5px;
+  margin: 15px auto;
+  background: linear-gradient(to right, #551ea1 , #6c22d3, #fff);
+}
+.Certificates .image{
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+  margin-bottom: 35px;
+  padding: 10px
+}
+.Certificates .image p{
+  position: absolute;
+  top: 7px;
+  left: 0;
+  width: calc(100% - 15px);
+  height: 207px;
+  background: #551ea1c2;
+  font-size: 20px;
+  padding: 70px 0;
+  margin-left: 5px;
+  cursor: arrow;
+  color: #fff;
+  font-weight: bold;
+  box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.3);
+}
+.Certificates .image:nth-of-type(even) p{
+  transform: translateX(110%);
+}
+.Certificates .image:nth-child(odd) p{
+  transform: translateX(-110%);
+}
+.Certificates .image:hover p{
+  transform: translateX(0px)
+}
+.Certificates .image > img{
+  width: calc(100% - 5px);
+  height: 200px;
+  box-shadow: 4px 4px 10px 2px rgba(0, 0, 0, 0.3);
+  border: 5px solid rgba(253, 253, 253, 0.932)
+}
+.Certificates .image p span{
+  display: inline-block;
+}
+.Certificates .image p button{
+  padding: 7px 20px;
+  font-size: 17px;
+  margin-top: 10px;
+  background: #fff;
+  color: #551ea1;
+  font-weight: bold;
+  border-radius: 25px;
+  border: 1px solid;
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  outline: none;
+}
+.Certificates .image p button:hover{
+  transform: scale(0.9);
+  box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.4);
+}
+
+.Certificates .image p a{
+  padding: 7px 20px;
+  font-size: 17px;
+  margin-top: 40px;
+  background: #551ea1;
+  color: #fff;
+  font-weight: 400;
+  border-radius: 25px;
+  border: 1px solid;
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  outline: none;
+  text-decoration: none;
+  display: inline-block;
+}
+.Certificates .image p a:hover{
+  transform: scale(0.9);
+  box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.4);
+}
+
+.Certificates .button button{
+  padding: 10px 60px;
+  border-radius: 5px;
+  font-size: 17px;
+  margin-top: 40px;
+  background: #551ea1;
+  color: #fff;
+  border: 1px solid;
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  outline: none;
+}
+.Certificates .button button:hover{
+  transform: scale(0.9);
+  box-shadow: 0 0 6px 6px rgba(79, 3, 102, 0.4);
+}
+.Certificates .modal img{
+  width: 100%;
+  height: 500px;
+}
+@media (min-width: 576px){
+  .Certificates .modal-dialog {
+      max-width: 75%;
+      margin: 3rem auto;
+  }
+}
+@media (max-width: 992px){
+  .Certificates .heading h1::after{
+    width: 60%;
+  }
+}
+@media (max-width: 768px){
+  .Certificates .heading h1::after{
+    width: 60%;
+  }
+  .Certificates .modal img{
+    width: 100%;
+    height: 300px;
+  }
+}
+@media (max-width: 576px){
+  .Certificates .heading h1 {
+    font-size: 40px;
+  }
+  .Certificates .heading h1::after{
+    width: 80%;
+  }
+}
+
 /*  Contact Me Section  */
 
 .Contact-Us{
@@ -651,11 +810,11 @@ header .backg i:hover{
   padding: 0 0 80px;
 }
 .Contact-Us .second input , .Contact-Us .second button{
-  width: 100%;
+  width: calc(50% - 3px);
   padding: 15px 20px;
   background: rgba(0, 0, 0, 0.4);
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.4);
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  box-shadow: inset 0 0 10px 2px rgba(0, 0, 0, 0.4);
   margin: 0 0 20px;
   color: #fff;
   font-size: 18px;
@@ -677,8 +836,8 @@ header .backg i:hover{
   width: 100%;
   padding: 15px 20px;
   background: rgba(0, 0, 0, 0.4);
-  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.4);
-  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: inset 0 0 10px 2px rgba(0, 0, 0, 0.4);
+  border: 2px solid rgba(255, 255, 255, 0.4);
   resize: none;
   font-size: 18px;
   color: #fff;
@@ -687,6 +846,7 @@ header .backg i:hover{
   border-left: none
 }
 .Contact-Us .second button{
+  width: 100%!important;
   text-align: center;
   font-size: 22px;
   cursor: pointer;
