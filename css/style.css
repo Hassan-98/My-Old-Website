@@ -898,6 +898,9 @@ header .backg i:hover{
   .Contact-Us .third div{
     margin-bottom: 30px;
   }
+  .Contact-Us .second input , .Contact-Us .second button{
+    width: 100%;
+  }
 }
 @media (max-width: 576px){
   .Contact-Us .heading h1 {
