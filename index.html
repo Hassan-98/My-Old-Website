@@ -9,6 +9,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Bootstrap Styles -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Animate.css Plugin -->
+    <link rel="stylesheet" href="css/animate.min.css">
     <!-- My Custom Styles -->
     <link rel="stylesheet" href="css/style.css">
     <!-- Font Awesome 5 Library -->
@@ -164,28 +166,28 @@
               <h1>My Services</h1>
             </div>
             <div class="col-lg-3 col-md-5 col-xs-10 text-center">
-                <div class="service">
+                <div class="service left">
                     <img src="images/coding.svg" alt="Coding">
                     <h3>Fast Coding</h3>
                     <p>I'm fast in typing on the keyboard, and I can write the code in a good and accurate way that enables me to finish designing projects and sites quickly and easily.</p>
                 </div>
             </div>
             <div class="col-lg-3 col-md-5 col-xs-10 text-center">
-                <div class="service">
+                <div class="service left">
                     <img src="images/shield.svg" alt="clean codes">
                     <h3>Clean Codes</h3>
                     <p>I specialize in writing valid and correct codes in a well organized and accurate way, following international standards and recommendations.</p>
                 </div>
             </div>
             <div class="col-lg-3 col-md-5 col-xs-10 text-center">
-                <div class="service">
+                <div class="service right">
                     <img src="images/devices.svg" alt="Responsive">
                     <h3>Responsive Design</h3>
                     <p>I can design websites, pages or full projects which are fully-responsive to all types of screens and devices, either with pure CSS3 or with Bootstrap Framework.</p>
                 </div>
             </div>
             <div class="col-lg-3 col-md-5 col-xs-10 text-center">
-                <div class="service">
+                <div class="service right">
                     <img src="images/creative.svg" alt="creative">
                     <h3>Creative Work</h3>
                     <p>I am always distinguished by a creative sense in designing and innovation of new ideas , to design organized and beautiful shaped websites and projects.</p>
@@ -199,7 +201,7 @@
 
         <!-- Start Numbers Section -->
 
-        <section class="Work-Numbers" id="Numbers">
+        <section class="Work-Numbers">
           <div class="overlay">
             <div class="row justify-content-center">
                 <div class="col-lg-3 col-md-5 col-xs-10 text-center">
@@ -567,11 +569,11 @@
             <div class="row second justify-content-center">
               <form netlify method="POST" name="Contact Me">
                 <div class="col-md-12 col-xs-12 mx-auto">
-                  <input type="text" name="Name" placeholder="Your Name *">
-                  <input type="email" name="Email" placeholder="Your Email *">
+                  <input type="text" name="Name" placeholder="Your Name *" required>
+                  <input type="email" name="Email" placeholder="Your Email *" required>
                 </div>
                 <div class="col-md-12 col-xs-12 mx-auto text-center">
-                  <textarea name="Message" rows="8" cols="80" placeholder="Your Message *"></textarea>
+                  <textarea name="Message" rows="8" cols="80" placeholder="Your Message *" required></textarea>
                   <button type="submit"><i class='far fa-envelope fa-md'></i> &nbsp; Send Message</button>
                 </div>
               </form>
@@ -600,7 +602,7 @@
         <footer>
           <div class="row footer">
             <div class="col-12 text-center">
-              <p>Copyrights&copy; Made By Hassan | All Rights Reserved</p>
+              <p>Copyrights &copy; Made By Hassan | All Rights Reserved</p>
             </div>
           </div>
         </footer>

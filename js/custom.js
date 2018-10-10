@@ -1,5 +1,5 @@
 // CountTo JS Function
-$('#Numbers').on('inview', function (event, visible) {
+$('.Work-Numbers').on('inview', function (event, visible) {
     if (visible == true) {
         $('.timer').countTo('restart');
     }
@@ -8,14 +8,79 @@ $('#Numbers').on('inview', function (event, visible) {
 window.onload = function(){
     document.querySelector('.loader').style.display = 'none';
 };
-// Contact Me Animation Function
+
+// Some Animations With Animate.css
+
+    // Contact Me Animation Function
 var loop = setInterval(animation , 5000);
 function animation(){
-    document.querySelector('.contact').style.animation = 'animate 0.55s ease';
-    document.querySelector('.message').style.animation = 'animate 0.55s ease 0.75s';
-    setTimeout(clear , 1500);
+    document.querySelector('.contact').classList.add('animated');
+    document.querySelector('.contact').classList.add('bounce');
+    document.querySelector('.message').style.animationDelay = '1.2s';
+    document.querySelector('.message').classList.add('animated');
+    document.querySelector('.message').classList.add('bounce');
+    setTimeout(clear , 2800);
     function clear(){
-    document.querySelector('.contact').style.animation = 'none';
-    document.querySelector('.message').style.animation = 'none';
+        document.querySelector('.contact').classList.remove('animated');
+        document.querySelector('.contact').classList.remove('bounce');
+        document.querySelector('.message').classList.remove('animated');
+        document.querySelector('.message').classList.remove('bounce');
     }
 }
+    // My Services Animation Function
+$('.My-Services').on('inview', function (event, visible) {
+    var servicesRight = document.querySelectorAll('.right');
+    var servicesLeft = document.querySelectorAll('.left');
+    if (visible == true) {
+        for(var i = 0; i < servicesRight.length; i++){
+            servicesRight[i].classList.add('animated');
+            servicesRight[i].classList.add('fadeInRight');
+            servicesRight[i].style.animationDuration = '1.2s';
+        }
+        for(var i = 0; i < servicesLeft.length; i++){
+            servicesLeft[i].classList.add('animated');
+            servicesLeft[i].classList.add('fadeInLeft');
+            servicesLeft[i].style.animationDuration = '1.2s';
+        }
+    } else {
+        for(var i = 0; i < servicesRight.length; i++){
+            servicesRight[i].classList.remove('animated');
+            servicesRight[i].classList.remove('fadeInRight');
+        }
+        for(var i = 0; i < servicesLeft.length; i++){
+            servicesLeft[i].classList.remove('animated');
+            servicesLeft[i].classList.remove('fadeInLeft');
+        }
+    }
+});
+    // My Portfolio Animation Function
+$('.Portfolio').on('inview', function (event, visible) {
+    var portfolioItem = document.querySelectorAll('.image');
+    if (visible == true) {
+        for(var i = 0; i < portfolioItem.length; i++){
+            portfolioItem[i].classList.add('animated');
+            portfolioItem[i].classList.add('zoomIn');
+            portfolioItem[i].style.animationDuration = '1.4s';
+        }
+    } else {
+        for(var i = 0; i < portfolioItem.length; i++){
+            portfolioItem[i].classList.remove('animated');
+            portfolioItem[i].classList.remove('zoomIn');
+        }
+    }
+});
+    // My Certificates Animation Function
+$('.Certificates').on('inview', function (event, visible) {
+    var certificate = document.querySelectorAll('.image');
+    if (visible == true) {
+        for(var i = 0; i < certificate.length; i++){
+            certificate[i].classList.add('animated');
+            certificate[i].classList.add('bounceIn');
+        }
+    } else {
+        for(var i = 0; i < certificate.length; i++){
+            certificate[i].classList.remove('animated');
+            certificate[i].classList.remove('bounceIn');
+        }
+    }
+});
