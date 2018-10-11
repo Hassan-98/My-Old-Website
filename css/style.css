@@ -185,6 +185,8 @@ header .backg i:hover{
   font-size: 50px;
   font-weight: bold;
   color: #551ea1;
+  height: 60px;
+  text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3)
 }
 .card h4{
   margin-bottom: 40px;
@@ -226,6 +228,9 @@ header .backg i:hover{
 .card i:hover{
   color: #551ea1;
   transform: translateY(-7px)
+}
+.card > span{
+  display: none;
 }
 @media (max-width: 576px){
   .card img{

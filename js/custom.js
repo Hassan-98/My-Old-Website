@@ -7,6 +7,39 @@ $('.Work-Numbers').on('inview', function (event, visible) {
 // PreLoader Function
 window.onload = function(){
     document.querySelector('.loader').style.display = 'none';
+    $(function(){
+        $(".typed").typed({
+            strings: ["I'm Hassan Ali", " ", "Web Designer", "Civil Engineer"],
+            // Optionally use an HTML element to grab strings from (must wrap each string in a <p>)
+            stringsElement: null,
+            // typing speed
+            typeSpeed: 25,
+            // time before typing starts
+            startDelay: 10,
+            // backspacing speed
+            backSpeed: 1,
+            // time before backspacing
+            backDelay: 3000,
+            // loop
+            loop: true,
+            // false = infinite
+            loopCount: false,
+            // show cursor
+            showCursor: true,
+            // attribute to type (null == text)
+            attr: null,
+            // either html or text
+            contentType: 'text',
+            // call when done callback function
+            callback: function() {},
+            // starting callback function before each string
+            preStringTyped: function() {},
+            //callback for every typed string
+            onStringTyped: function() {},
+            // callback for reset
+            resetCallback: function() {}
+        });
+    });
 };
 
 // Some Animations With Animate.css
@@ -60,7 +93,7 @@ $('.Portfolio').on('inview', function (event, visible) {
         for(var i = 0; i < portfolioItem.length; i++){
             portfolioItem[i].classList.add('animated');
             portfolioItem[i].classList.add('zoomIn');
-            portfolioItem[i].style.animationDuration = '1.4s';
+            portfolioItem[i].style.animationDuration = '1.6s';
         }
     } else {
         for(var i = 0; i < portfolioItem.length; i++){
@@ -84,3 +117,5 @@ $('.Certificates').on('inview', function (event, visible) {
         }
     }
 });
+
+// TypedJS Function
