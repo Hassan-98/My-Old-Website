@@ -776,7 +776,7 @@ header .backg i:hover{
 }
 .Certificates .modal img{
   width: 100%;
-  height: 500px;
+  height: 550px;
 }
 @media (min-width: 576px){
   .Certificates .modal-dialog {
