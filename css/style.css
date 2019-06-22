@@ -19,7 +19,7 @@ html {
 .overlay{
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.65)
+  background: rgba(0, 0, 0, 0.7)
 }
 
 /* PreLoader Styles */
@@ -383,13 +383,13 @@ header .backg i:hover{
   width: 95%;
 }
 .Skills .row .skill:nth-of-type(2) div span{
-  width: 85%;
+  width: 90%;
 }
 .Skills .row .skill:nth-of-type(3) div span{
-  width: 70%;
+  width: 85%;
 }
 .Skills .row .skill:last-of-type div span{
-  width: 30%;
+  width: 85%;
 }
 .Skills .row .skill div::after{
   content: attr(data-skill);
@@ -401,13 +401,22 @@ header .backg i:hover{
 
 
 .Skills.more .row .skill:first-of-type div span{
-  width: 80%;
+  width: 85%;
 }
 .Skills.more .row .skill:nth-of-type(2) div span{
-  width: 70%;
+  width: 80%;
 }
 .Skills.more .row .skill:nth-of-type(3) div span{
-  width: 65%;
+  width: 75%;
+}
+
+.skill img{
+    width: 30px;
+    height: 30px;
+    background: #fff;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    border-radius: 5px;
+    border: 3px solid;
 }
 
 @media (max-width: 768px){
@@ -570,6 +579,9 @@ header .backg i:hover{
   height: 450px;
   box-shadow: 4px 4px 10px 2px rgba(0, 0, 0, 0.3);
   border: 5px solid rgba(253, 253, 253, 0.932);
+}
+.Portfolio .image img.apps{
+  height: 350px;
 }
 .Portfolio .image p span{
   display: inline-block;
@@ -1036,4 +1048,7 @@ footer p {
   .Contact-Us .second input, .Contact-Us .second button , .Contact-Us .second textarea , .Contact-Us .second button{
     font-size: 15px;
   }
+}
+.service, .About-Me .my-info button {
+  transition: all 0.35s ease-in-out!important;
 }
