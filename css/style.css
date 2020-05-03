@@ -404,9 +404,12 @@ header .backg i:hover{
   width: 85%;
 }
 .Skills.more .row .skill:nth-of-type(2) div span{
-  width: 80%;
+  width: 85%;
 }
 .Skills.more .row .skill:nth-of-type(3) div span{
+  width: 80%;
+}
+.Skills.more .row .skill:nth-of-type(4) div span{
   width: 75%;
 }
 
