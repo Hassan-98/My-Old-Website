@@ -9,7 +9,7 @@ window.onload = function(){
     document.querySelector('.loader').style.display = 'none';
     $(function(){
         $(".typed").typed({
-            strings: ["I'm Hassan Ali", " ", "Web Designer", "Civil Engineer"],
+            strings: ["I'm Hassan Ali", " ", "Web Developer", "Civil Engineer"],
             // Optionally use an HTML element to grab strings from (must wrap each string in a <p>)
             stringsElement: null,
             // typing speed
